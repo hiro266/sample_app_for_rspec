@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    title { 'テストタイトル' }
+    sequence(:title) { |n| "テストタイトル#{n}" }
     status { :todo }
     user
   end
