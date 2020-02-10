@@ -20,7 +20,7 @@ RSpec.describe Task, type: :model do
     end
 
     it 'タイトル重複で無効' do
-      duplication = Task.create(title: 'テストタイトル', status: 0, user: user)
+      duplication = Task.create(title: 'テストタイトル', status: 0)
       duplication.valid?
       expect(duplication.valid?).to eq(false)
     end
