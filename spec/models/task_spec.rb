@@ -26,8 +26,8 @@ RSpec.describe Task, type: :model do
     end
 
     it 'タイトルユニークで有効' do
-      unique = Task.create(title: 'ユニークタイトル', status: 0, user: user)
-      expect(unique).to be_valid
+      task_with_unique_title = Task.create(title: 'ユニークタイトル', status: 0, user: user)
+      expect(task_with_unique_title).to be_valid
     end
   end
 end
