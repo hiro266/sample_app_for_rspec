@@ -11,14 +11,12 @@ RSpec.describe Task, type: :model do
 
     it 'タイトル空白で無効' do
       task.title = nil
-      task.valid?
-      expect(task.errors[:title]).to include("can't be blank")
+      expect(task).to be_invalid
     end
 
     it 'ステータス空白で無効' do
       task.status = nil
-      task.valid?
-      expect(task.errors[:status]).to include("can't be blank")
+      expect(task).to be_invalid
     end
 
     it 'タイトル重複で無効' do
