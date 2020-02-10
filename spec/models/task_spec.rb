@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Task, type: :model do
   describe 'validation' do
-    let(:user) { FactoryBot.create(:user) }
-    let!(:task) { FactoryBot.create(:task, user: user) }
+    let(:user) { create(:user) }
+    let!(:task) { create(:task, user: user) }
 
     it '全ての属性が有効' do
       expect(task).to be_valid
